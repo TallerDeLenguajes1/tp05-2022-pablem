@@ -21,39 +21,53 @@
 //otro cálculo.
 
 //System.Math.Pow(a,2);
-double resultado;
+int op;
+double n1,n2=0,resultado;
 bool ban = true;
 
 while(ban) {
     Console.WriteLine("Ingrese el código de la operación: ");
-    string op = Console.ReadLine();
-    Console.WriteLine("Ingrese el primer número: ");
-    string n1 = Console.ReadLine();
-
-    Console.WriteLine("Ingrese el segundo número: ");
-    string n2 = Console.ReadLine(); //se usó un tipo implícito para sortear el waring
-
-    resultado = calculadora(n1,n2,op); //waing hacer control de null?
+    op = Convert.ToInt16(Console.ReadLine());
+    Console.WriteLine("Ingrese el número: ");
+    n1 = Convert.ToDouble(Console.ReadLine());
+    if(op <= 4) {
+        Console.WriteLine("Ingrese el segundo número: ");
+        n2 = Convert.ToDouble(Console.ReadLine());
+    }
+    resultado = calculadora(n1,n2,op);
     Console.WriteLine("El resultado es: " + resultado);
-    Console.WriteLine("¿Desea realizar otra operación?(0/1)");
+    Console.WriteLine("\n¿Desea realizar otra operación?(0/1)");
     ban = Convert.ToBoolean(Convert.ToInt16(Console.ReadLine()));
 }
 
-double calculadora(string cadenaA, string cadenaB, string cadenaOp)
+Console.WriteLine("\nExtra: Ingrese dos números: ");
+n1 = Convert.ToDouble(Console.ReadLine());
+n2 = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("El máximo es: " + Math.Max(n1,n2));
+Console.WriteLine("El mínimo es: " + Math.Min(n1,n2));
+
+double calculadora(double a, double b, int op)
 {
-    double a = Convert.ToDouble(cadenaA);
-    double b = Convert.ToDouble(cadenaB);
-    int op = Convert.ToInt16(cadenaOp);
-    
     switch (op) {
+        case 1: return a+b;
         case 2: return a-b;
         case 3: return a*b;
-        case 4: if(b!=0) {
-                    return a/b;
-                } else {
-                    Console.WriteLine("(división por cero)");
-                    return 9999;
-                }
-        default: return a+b;
+        case 4: 
+            if(b!=0) {
+                return a/b;
+            } else {
+                Console.WriteLine("(división por cero)");
+                return double.NaN;
+            }
+        case 5: return Math.Abs(a);
+        case 6: return Math.Pow(a,2);
+        case 7: return Math.Sqrt(a);
+        case 8: return Math.Sin(a);
+        case 9: return Math.Cos(a);
+        case 10: return Math.Ceiling(a);
+        default: 
+            Console.WriteLine("Código no válido."); 
+            return double.NaN;
     }
 }
