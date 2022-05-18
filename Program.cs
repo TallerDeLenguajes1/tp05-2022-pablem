@@ -1,17 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 //0.- Hola mundo
-Console.WriteLine("Hello World!");
+// Console.WriteLine("Hello World!");
 
 //1.- Construir un programa que permita invertir Número de N cifras. 
 //    Si el número es menor o igual a cero evitar esta conversión
-Console.WriteLine("Ingrese un número: ");
-string texto = Console.ReadLine();
-char[] arreglo = texto.ToCharArray(); //otro método?
-Array.Reverse(arreglo);
-texto = new string (arreglo);
-int numero =  Convert.ToInt32(texto); //Int32.Parse(texto)
-Console.WriteLine(numero);
+// Console.WriteLine("Ingrese un número: ");
+// string texto = Console.ReadLine();
+// char[] arreglo = texto.ToCharArray(); //otro método?
+// Array.Reverse(arreglo);
+// texto = new string (arreglo);
+// int numero =  Convert.ToInt32(texto); //Int32.Parse(texto)
+// Console.WriteLine(numero);
 
 //2.- Ingrese al branch CalculadoraV1 y construya un programa que sea una
 //calculadora que permita al usuario realizar las 4 operaciones básicas (Sumar, Restar,
@@ -25,16 +25,20 @@ double resultado;
 bool ban = true;
 
 while(ban) {
-    Console.WriteLine("Ingrese un número: ");
-    string n1 = Console.ReadLine();
-    Console.WriteLine("Ingrese otro número: ");
-    string n2 = Console.ReadLine();
-    Console.WriteLine("Ingrese el número de la operación: ");
+    Console.WriteLine("Ingrese el código de la operación: ");
     string op = Console.ReadLine();
+    Console.WriteLine("Ingrese el primer número: ");
+    string n1 = Console.ReadLine();
 
-    
+    Console.WriteLine("Ingrese el segundo número: ");
+    string n2 = Console.ReadLine(); //se usó un tipo implícito para sortear el waring
 
+    resultado = calculadora(n1,n2,op); //waing hacer control de null?
+    Console.WriteLine("El resultado es: " + resultado);
+    Console.WriteLine("¿Desea realizar otra operación?(0/1)");
+    ban = Convert.ToBoolean(Convert.ToInt16(Console.ReadLine()));
 }
+
 double calculadora(string cadenaA, string cadenaB, string cadenaOp)
 {
     double a = Convert.ToDouble(cadenaA);
