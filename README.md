@@ -4,9 +4,13 @@
 **Responder las siguientes preguntas en el archivo readme.md**
 
 ### ¿String es una tipo por valor o un tipo por referencia?
-    Una cadena es un objeto de tipo String cuyo valor es texto. Internamente, el texto se almacena como una colección de sólo lectura de objetos Char.
-    String es un tipo de referencia, pero los operadores de igualdad (== y !=) se definen para comparar los valores de objetos string y no las referencias. De esta forma, es más intuitivo comprobar la igualdad entre cadenas.
-    Los operadores de C# que parecen modificar una cadena, en realidad devuelven los resultados en un nuevo objeto de cadena (se debe actuar con precaución al crear referencias a las cadenas).
+    Una cadena es un objeto de tipo String cuyo valor es texto. Internamente, el texto se almacena como una
+    colección de sólo lectura de objetos Char.
+    String es un tipo de referencia, pero los operadores de igualdad (== y !=) se definen para comparar los
+    valores de objetos string y no las referencias. De esta forma, es más intuitivo comprobar la igualdad
+    entre cadenas.
+    Los operadores de C# que parecen modificar una cadena, en realidad devuelven los resultados en un nuevo
+    objeto de cadena (se debe actuar con precaución al crear referencias a las cadenas).
 ### ¿Qué secuencias de escape tiene el tipo string?
 <table>
 <colgroup>
@@ -96,5 +100,8 @@
 </table>
 
 ### ¿Qué sucede cuando utiliza el carácter @ y $ antes de una cadena de texto?
-    El caracter **@** convierte una cadena regular en una cadena textual (*verbatim string*). Es decir, que las secuencias de escape se imprimen tal cual como aparecen.
-    El caracter **$** identifica una cadena como cadena interpolada (*interpolated string*). Cuando una cadena interpolada se imprime, los elementos con expresiones de interpolación se reemplazan por las representaciones de cadena de los resultados de la expresión.
+    El caracter **@** convierte una cadena regular en una cadena textual (*verbatim string*). Es decir, 
+    que las secuencias de escape se imprimen tal cual como aparecen.
+    El caracter **$** identifica una cadena como cadena interpolada (*interpolated string*). Cuando una
+    cadena interpolada se imprime, los elementos con expresiones de interpolación se reemplazan por las
+    representaciones de cadena de los resultados de la expresión.
