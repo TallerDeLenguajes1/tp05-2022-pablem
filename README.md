@@ -123,6 +123,7 @@ Las principales utilidades son:
 + Extraer, editar, reemplazar o eliminar subcadenas de texto.
 + Agregar cadenas extraídas en una colección para generar un informe.
 #### ¿Cómo se hace uso de estas en C#?
-https://docs.microsoft.com/es-es/dotnet/standard/base-types/regular-expressions
 
-La clase String incluye varios métodos de búsqueda y reemplazo de cadenas que puede usar cuando desee buscar cadenas literales en una cadena mayor. Las expresiones regulares son muy útiles cuando se desea buscar una de varias subcadenas en una cadena mayor o cuando se desea identificar patrones en una cadena, como se muestra en los ejemplos siguientes.
+La clase String incluye varios métodos de búsqueda y reemplazo de cadenas que puede usar cuando desee buscar cadenas literales en una cadena mayor. Las expresiones regulares son muy útiles cuando se desea buscar una de varias subcadenas en una cadena mayor o cuando se desea identificar patrones en una cadena, como se muestra en los siguientes ejemplos:
+
+https://docs.microsoft.com/es-es/dotnet/standard/base-types/regular-expressions
