@@ -108,6 +108,7 @@
 
 ### Expresiones Regulares
 **Busque en diferentes bibliografías que son y cómo funcionan las expresiones regulares.**
+
     Una expresión regular o regex, es una secuencia de caracteres que conforma un patrón de búsqueda.
     Se utilizan principalmente para la búsqueda de patrones de cadenas de caracteres u operaciones de
     sustituciones.
@@ -124,4 +125,4 @@ Las principales utilidades son:
 #### ¿Cómo se hace uso de estas en C#?
 https://docs.microsoft.com/es-es/dotnet/standard/base-types/regular-expressions
 
-La clase String incluye varios métodos de búsqueda y reemplazo de cadenas que puede usar cuando desee buscar cadenas literales en una cadena mayor.
+La clase String incluye varios métodos de búsqueda y reemplazo de cadenas que puede usar cuando desee buscar cadenas literales en una cadena mayor. Las expresiones regulares son muy útiles cuando se desea buscar una de varias subcadenas en una cadena mayor o cuando se desea identificar patrones en una cadena, como se muestra en los ejemplos siguientes.
