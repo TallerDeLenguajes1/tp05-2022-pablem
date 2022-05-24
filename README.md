@@ -100,8 +100,28 @@
 </table>
 
 ### ¿Qué sucede cuando utiliza el carácter @ y $ antes de una cadena de texto?
-    El caracter **@** convierte una cadena regular en una cadena textual (*verbatim string*). Es decir, 
+    El caracter @ convierte una cadena regular en una cadena textual (verbatim string). Es decir, 
     que las secuencias de escape se imprimen tal cual como aparecen.
-    El caracter **$** identifica una cadena como cadena interpolada (*interpolated string*). Cuando una
+    El caracter $ identifica una cadena como cadena interpolada (interpolated string). Cuando una
     cadena interpolada se imprime, los elementos con expresiones de interpolación se reemplazan por las
     representaciones de cadena de los resultados de la expresión.
+
+### Expresiones Regulares
+**Busque en diferentes bibliografías que son y cómo funcionan las expresiones regulares.**
+    Una expresión regular o regex, es una secuencia de caracteres que conforma un patrón de búsqueda.
+    Se utilizan principalmente para la búsqueda de patrones de cadenas de caracteres u operaciones de
+    sustituciones.
+#### ¿Funcionan únicamente en C#?
+    Inicialmente, el mecanismo era inherente al lenguaje de programación pero, con el tiempo, se ha ido
+    incorporando el uso de expresiones regulares para facilitar programar la detección de ciertas cadenas.
+    Los lenguajes lo han incorporado como funciones específicas sin incorporarlo a su sintaxis.
+#### ¿En qué casos le parecen útiles? Enuncie al menos 3.
+Las principales utilidades son:
++ Buscar patrones concretos de caracteres.
++ Validar el texto para garantizar que coincide con un patrón predefinido (como una dirección de correo electrónico).
++ Extraer, editar, reemplazar o eliminar subcadenas de texto.
++ Agregar cadenas extraídas en una colección para generar un informe.
+#### ¿Cómo se hace uso de estas en C#?
+https://docs.microsoft.com/es-es/dotnet/standard/base-types/regular-expressions
+
+La clase String incluye varios métodos de búsqueda y reemplazo de cadenas que puede usar cuando desee buscar cadenas literales en una cadena mayor.
